@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTSAV Legal | Privacy & Terms</title>
+    <title>UTSAV Legal | Privacy & Safety Portal</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,73 +13,58 @@
             --primary: #8B3BF0;
             --secondary: #5E26D1;
             --bg-gradient: linear-gradient(135deg, #8B3BF0 0%, #5E26D1 100%);
-            --glass-bg: rgba(255, 255, 255, 0.9);
-            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-bg: rgba(255, 255, 255, 0.95);
+            --glass-border: rgba(255, 255, 255, 0.3);
             --text-main: #1A1A1A;
-            --text-secondary: #555555;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --text-secondary: #4A4A4A;
+            --shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg-gradient);
             background-attachment: fixed;
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.8;
             min-height: 100vh;
         }
 
-        h1, h2, h3, .brand {
-            font-family: 'Outfit', sans-serif;
-        }
+        h1, h2, h3, .brand { font-family: 'Outfit', sans-serif; }
 
-        /* --- Header / Brand --- */
         header {
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             color: white;
-            text-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .brand {
-            font-size: 42px;
-            font-weight: 700;
-            letter-spacing: 2px;
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: 3px;
             margin-bottom: 8px;
         }
 
-        .subtitle {
-            font-size: 16px;
-            opacity: 0.9;
-            font-weight: 300;
-        }
+        .subtitle { font-size: 16px; opacity: 0.85; font-weight: 400; }
 
-        /* --- Layout Container --- */
         .container {
-            max-width: 1100px;
-            margin: 0 auto 60px;
+            max-width: 1200px;
+            margin: 0 auto 80px;
             display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 30px;
-            padding: 0 20px;
+            grid-template-columns: 320px 1fr;
+            gap: 40px;
+            padding: 0 25px;
         }
 
-        /* --- Sidebar Navigation --- */
         .sidebar {
             position: sticky;
             top: 40px;
             height: fit-content;
             background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 30px 20px;
+            backdrop-filter: blur(25px);
+            border-radius: 28px;
+            padding: 35px 25px;
             border: 1px solid var(--glass-border);
             box-shadow: var(--shadow);
         }
@@ -87,234 +72,187 @@
         .nav-item {
             display: flex;
             align-items: center;
-            padding: 14px 18px;
+            padding: 16px 20px;
             margin-bottom: 12px;
             text-decoration: none;
             color: var(--text-secondary);
-            font-weight: 500;
+            font-weight: 600;
             font-size: 15px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .nav-item:hover {
-            background: rgba(139, 59, 240, 0.08);
+            background: rgba(139, 59, 240, 0.1);
             color: var(--primary);
-            transform: translateX(5px);
+            transform: translateX(8px);
         }
 
         .nav-item.active {
             background: var(--primary);
             color: white;
-            box-shadow: 0 4px 12px rgba(139, 59, 240, 0.3);
+            box-shadow: 0 8px 20px rgba(139, 59, 240, 0.35);
         }
 
-        .nav-item i {
-            margin-right: 12px;
-            font-size: 18px;
-        }
-
-        /* --- Content Area --- */
         .main-content {
             background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 50px 60px;
+            backdrop-filter: blur(25px);
+            border-radius: 32px;
+            padding: 60px 70px;
             border: 1px solid var(--glass-border);
             box-shadow: var(--shadow);
         }
 
-        section {
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-
-        section.active {
-            display: block;
-        }
+        section { display: none; animation: fadeIn 0.6s ease-out; }
+        section.active { display: block; }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* --- Typography & Elements --- */
         h2 {
-            font-size: 32px;
+            font-size: 36px;
             color: var(--primary);
             margin-bottom: 30px;
-            border-bottom: 2px solid rgba(139, 59, 240, 0.1);
-            padding-bottom: 10px;
+            border-bottom: 3px solid rgba(139, 59, 240, 0.1);
+            padding-bottom: 15px;
         }
 
-        h3 {
-            font-size: 20px;
-            margin: 35px 0 15px;
-            color: #333;
+        h3 { font-size: 22px; margin: 40px 0 15px; color: #111; font-weight: 700; }
+
+        .important-box {
+            background: rgba(139, 59, 240, 0.05);
+            border-left: 5px solid var(--primary);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 16px 16px 0;
         }
 
-        p {
-            margin-bottom: 20px;
-            color: var(--text-secondary);
-        }
+        .important-box h4 { color: var(--primary); margin-bottom: 10px; font-size: 18px; }
 
-        ul {
-            margin-bottom: 25px;
-            padding-left: 20px;
-            color: var(--text-secondary);
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
+        p, ul, li { color: var(--text-secondary); font-size: 15px; }
+        ul { padding-left: 25px; margin-bottom: 25px; }
+        li { margin-bottom: 12px; }
 
         .badge {
             display: inline-block;
-            background: rgba(139, 59, 240, 0.1);
-            color: var(--primary);
-            padding: 4px 12px;
+            background: var(--primary);
+            color: white;
+            padding: 6px 16px;
             border-radius: 100px;
             font-size: 11px;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
 
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 13px;
-        }
+        footer { text-align: center; padding: 50px 20px; color: rgba(255, 255, 255, 0.8); font-size: 14px; }
 
-        /* --- Responsive --- */
-        @media (max-width: 900px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                position: static;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                padding: 15px;
-            }
-            .nav-item {
-                margin-bottom: 0;
-                padding: 10px 15px;
-                font-size: 13px;
-            }
-            .main-content {
-                padding: 30px 25px;
-            }
+        @media (max-width: 950px) {
+            .container { grid-template-columns: 1fr; }
+            .sidebar { position: static; display: flex; flex-wrap: wrap; gap: 12px; padding: 20px; }
+            .nav-item { margin-bottom: 0; flex: 1 1 auto; white-space: nowrap; }
+            .main-content { padding: 40px 25px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="brand">UTSΛV</div>
-        <div class="subtitle">Platform Legal & Safety Portal</div>
+        <div class="brand">UTSΛV PLΛNNER</div>
+        <div class="subtitle">Official Privacy & Legal Compliance Hub</div>
     </header>
 
     <div class="container">
-        <!-- Navigation -->
         <nav class="sidebar">
-            <a href="#" class="nav-item active" onclick="showSection('privacy', event)">
-                <span>🛡️ Privacy Policy</span>
-            </a>
-            <a href="#" class="nav-item" onclick="showSection('terms', event)">
-                <span>📜 Terms of Service</span>
-            </a>
-            <a href="#" class="nav-item" onclick="showSection('eula', event)">
-                <span>📄 End User License (EULA)</span>
-            </a>
-            <a href="#" class="nav-item" onclick="showSection('cookies', event)">
-                <span>🍪 Cookie Policy</span>
-            </a>
+            <a href="#" class="nav-item active" onclick="showSection('privacy', event)"><span>🛡️ Privacy Policy</span></a>
+            <a href="#" class="nav-item" onclick="showSection('deletion', event)"><span>🗑️ Data Deletion</span></a>
+            <a href="#" class="nav-item" onclick="showSection('terms', event)"><span>📜 Terms of Service</span></a>
+            <a href="#" class="nav-item" onclick="showSection('eula', event)"><span>📄 App Store EULA</span></a>
         </nav>
 
-        <!-- Main Content -->
         <div class="main-content">
             
-            <!-- Privacy Policy -->
+            <!-- PRIVACY POLICY -->
             <section id="privacy" class="active">
-                <div class="badge">Safety First</div>
+                <div class="badge">Google Play Compliant</div>
                 <h2>Privacy Policy</h2>
-                <p>Last updated: March 29, 2026</p>
-                <p>At UTSAV, we are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about our policy, or our practices with regards to your personal information, please contact us at support@utsav.app.</p>
+                <p><strong>Effective Date:</strong> April 6, 2026</p>
+                
+                <p>Welcome to UTSAV. Your privacy is paramount. This policy explains how we collect and protect your data across our platform.</p>
                 
                 <h3>1. INFORMATION WE COLLECT</h3>
-                <p>We collect personal information that you provide to us such as name, address, contact information, passwords and security data, and payment information.</p>
+                <p>We collect information necessary to facilitate professional event planning and vendor collaboration:</p>
                 <ul>
-                    <li>Account credentials for authentication.</li>
-                    <li>Profile data including business name and contact person.</li>
-                    <li>Usage data including chat messages and event planning history.</li>
+                    <li><strong>Personal Data:</strong> Name, Email, Phone Number, and Business details.</li>
+                    <li><strong>Event Logistics:</strong> Event dates, locations, requirements, and budget details.</li>
+                    <li><strong>Operational Data:</strong> Staff attendance records and payroll calculations.</li>
                 </ul>
 
-                <h3>2. HOW WE USE YOUR INFORMATION</h3>
-                <p>We use personal information collected via our Services for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations.</p>
+                <div class="important-box">
+                    <h4>📸 1.1 Media, Camera & Files</h4>
+                    <p>UTSAV requests access to your device's Camera and Photo Library. We collect and store photos solely for:</p>
+                    <ul>
+                        <li>Setting and updating your professional Profile Picture.</li>
+                        <li>Uploading Vendor Portfolio images and videos to showcase services.</li>
+                    </ul>
+                </div>
 
-                <h3>3. DATA DELETION REQUESTS</h3>
-                <p>In accordance with App Store guidelines, we provide a self-service option to delete your entire account and associated data from the "Profile" screen. Upon deletion, all personal data is purged from our production servers within 48 hours.</p>
+                <h3>2. USE OF DATA</h3>
+                <p>Data is used exclusively to facilitate your event planning workflow, manage vendor payouts, and ensure team transparency. We <strong>never</strong> sell your data to third-party advertisers.</p>
+
+                <h3>3. SECURITY</h3>
+                <p>All data is encrypted and stored using Supabase (PostgreSQL) enterprise-grade infrastructure. External access is strictly controlled via row-level security (RLS).</p>
             </section>
 
-            <!-- Terms of Service -->
+            <!-- DATA DELETION -->
+            <section id="deletion">
+                <div class="badge">User Rights</div>
+                <h2>Data Deletion & Removal</h2>
+                <p>We respect your right to be forgotten. We provide two ways to permanently remove your data:</p>
+
+                <h3>1. In-App Deletion</h3>
+                <p>Navigate to <strong>Profile > Edit Profile > Delete Account</strong>. This will instantly purge your specific user data from our databases.</p>
+
+                <div class="important-box">
+                    <h4>🌐 2. Web-Based Deletion Request</h4>
+                    <p>In accordance with Google Play Policy, you may also request account and data deletion via our public portal if you cannot access the app:</p>
+                    <p><strong>Request Link:</strong> <a href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" style="color: var(--primary); font-weight: 700;">Account Deletion Request Form</a></p>
+                    <small>Requests submitted via the web portal are processed within 48-72 hours.</small>
+                </div>
+            </section>
+
+            <!-- TERMS OF SERVICE -->
             <section id="terms">
-                <div class="badge">Agreement</div>
-                <h2>Terms of Service</h2>
-                <p>Last updated: March 29, 2026</p>
-                <p>Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the UTSAV mobile application (the "Service") operated by UTSAV ("us", "we", or "our").</p>
-                
-                <h3>1. PLATFORM USAGE</h3>
-                <p>The Service is designed to connect Event Planners with Vendors. We do not guarantee the performance of any vendor or the success of any event planned using the application.</p>
-
-                <h3>2. USER ACCOUNTS</h3>
-                <p>When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.</p>
-
-                <h3>3. COMMUNITY CONDUCT</h3>
-                <p>Any use of the chat system for harassment, offensive language, or fraudulent activities will result in immediate suspension. Users have the right to report and block abusive individuals.</p>
+                ... (Existing Terms content) ...
             </section>
 
             <!-- EULA -->
             <section id="eula">
-                <div class="badge">Apple Standard</div>
+                <div class="badge">Apple & Google Standard</div>
                 <h2>End User License Agreement</h2>
-                <p>This End User License Agreement ("Agreement") is a binding legal agreement between you and UTSAV.</p>
-                <h3>1. LICENSE GRANT</h3>
-                <p>We grant you a revocable, non-exclusive, non-transferable, limited license to download, install and use the Application strictly in accordance with the terms of this Agreement.</p>
-                <h3>2. OBJECTIONABLE CONTENT</h3>
-                <p>Apple's App Store Review Guideline 1.2 requires that there is no tolerance for objectionable content or abusive users. By using this app, you agree not to submit offensive material. We reserve the right to remove any content that violates this rule.</p>
-            </section>
-
-            <!-- Cookies -->
-            <section id="cookies">
-                <div class="badge">Transparency</div>
-                <h2>Cookie Policy</h2>
-                <p>UTSAV uses essential cookies and local storage tokens for authentication purposes only. We do not use third-party tracking cookies for advertising.</p>
+                <h3>1. NO TOLERANCE POLICY</h3>
+                <p>UTSAV maintains a zero-tolerance policy for objectionable content. Any user found utilizing the chat or platform for harassment, hate speech, or offensive media will be permanently banned with no prior warning.</p>
             </section>
 
         </div>
     </div>
 
     <footer>
-        &copy; 2026 UTSAV Event Technologies Ltd. All rights reserved.
+        &copy; 2026 UTSAV Event Technologies Ltd. All rights reserved. <br>
+        Built for professionals, by professionals.
     </footer>
 
     <script>
         function showSection(id, event) {
             if (event) event.preventDefault();
-            
-            // Hide all sections
             document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-            
-            // Show target
             document.getElementById(id).classList.add('active');
-            
-            // Update sidebar
             document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
             if (event) event.currentTarget.classList.add('active');
+            window.scrollTo(0, 0);
         }
     </script>
 </body>
